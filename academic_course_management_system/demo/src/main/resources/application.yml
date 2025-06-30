@@ -1,3 +1,50 @@
+# server:
+#   port: 8080
+#   servlet:
+#     context-path: /api
+
+# spring:
+#   datasource:
+#     url: jdbc:h2:mem:testdb
+#     driver-class-name: org.h2.Driver
+#     username: sa
+#     password:
+#   h2:
+#     console:
+#       enabled: true
+
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#     show-sql: true
+
+#   thymeleaf:
+#     prefix: classpath:/templates/
+#     suffix: .html
+#     mode: HTML5
+#     cache: false
+
+#   servlet:
+#     multipart:
+#       max-file-size: 20MB
+#       max-request-size: 20MB
+
+#   cloudinary:
+#     cloud_name: ${CLOUDINARY_CLOUD_NAME}
+#     api_key: ${CLOUDINARY_API_KEY}
+#     api_secret: ${CLOUDINARY_API_SECRET}
+
+# logging:
+#   level:
+#     org.springframework: INFO
+#     com.example: DEBUG
+#     org.springframework.core.env: DEBUG
+
+# jwt:
+#   secret: ${JWT_SECRET}
+#   expiration: 86400000
+
+
 server:
   port: 8080
   servlet:
@@ -5,41 +52,35 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
     username: sa
     password:
   h2:
     console:
       enabled: true
-
+      path: /h2-console
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
   thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML5
     cache: false
-
   servlet:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
 
-  cloudinary:
-    cloud_name: ${CLOUDINARY_CLOUD_NAME}
-    api_key: ${CLOUDINARY_API_KEY}
-    api_secret: ${CLOUDINARY_API_SECRET}
+cloudinary:
+  cloud_name: dlt5vrlat
+  api_key: 517399772578689
+  api_secret: Gab61TmwAxzGAzJg2DwLckR_7Js
 
 logging:
   level:
     org.springframework: INFO
     com.example: DEBUG
-    org.springframework.core.env: DEBUG
 
 jwt:
-  secret: ${JWT_SECRET}
+  secret: secretKeyToGenJWTs
   expiration: 86400000
