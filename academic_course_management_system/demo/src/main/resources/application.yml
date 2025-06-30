@@ -72,9 +72,9 @@ spring:
       max-request-size: 20MB
 
 cloudinary:
-  cloud_name: dlt5vrlat
-  api_key: 517399772578689
-  api_secret: Gab61TmwAxzGAzJg2DwLckR_7Js
+  cloud_name: ${CLOUDINARY_CLOUD_NAME}
+  api_key: ${CLOUDINARY_API_KEY}
+  api_secret: ${CLOUDINARY_API_SECRET}
 
 logging:
   level:
@@ -82,5 +82,5 @@ logging:
     com.example: DEBUG
 
 jwt:
-  secret: secretKeyToGenJWTs
+  secret: ${JWT_SECRET}
   expiration: 86400000
