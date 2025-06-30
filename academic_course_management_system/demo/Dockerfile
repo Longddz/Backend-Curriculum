@@ -15,3 +15,4 @@ EXPOSE 8080
 
 # Chạy ứng dụng
 CMD ["java", "-jar", "target/demo-1.0-SNAPSHOT.jar"]
+
