@@ -68,7 +68,7 @@ public class Curriculum {
     @ManyToOne
     @JoinColumn(name = "identifier", referencedColumnName = "identifier", insertable = false, updatable = false,
             foreignKey = @ForeignKey(name = "FK_curriculum_user",
-                    foreignKeyDefinition = "FOREIGN KEY (identifier) REFERENCES User(identifier) ON DELETE SET NULL ON UPDATE CASCADE"))
+                    foreignKeyDefinition = "FOREIGN KEY (identifier) REFERENCES app_user(identifier) ON DELETE SET NULL ON UPDATE CASCADE"))
     private User user;
 
     @ManyToOne
